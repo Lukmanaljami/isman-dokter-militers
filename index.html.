@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b1830">
+<title>ISMAN | Menuju Dokter Militer</title>
+<style>
+:root {
+  --navy:#0b1830;
+  --navy2:#142947;
+  --gold:#d8b66d;
+  --cream:#f7f5ef;
+  --white:#fff;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; font-family:Arial,sans-serif;
+  color:#19243a; background:var(--cream); line-height:1.7;
+}
+header {
+  background:var(--navy); color:white;
+  padding:15px 6%; display:flex; align-items:center;
+  justify-content:space-between; gap:15px;
+  position:sticky; top:0; z-index:5;
+}
+.logo { font-weight:bold; letter-spacing:3px; }
+.logo span { color:var(--gold); }
+nav { display:flex; gap:18px; flex-wrap:wrap; }
+nav a { color:white; text-decoration:none; font-size:13px; }
+nav a:hover { color:var(--gold); }
+.hero {
+  background:radial-gradient(circle at 90% 20%,#29456b,transparent 40%),var(--navy);
+  color:white; padding:95px 7%; min-height:540px;
+  display:flex; align-items:center;
+}
+.hero-content { max-width:760px; }
+.eyebrow {
+  color:var(--gold); text-transform:uppercase;
+  letter-spacing:3px; font-size:12px; font-weight:bold;
+}
+h1 { font-size:clamp(40px,8vw,76px); line-height:1.08; margin:20px 0; }
+h1 span { color:var(--gold); }
+.hero p { color:#d6deeb; max-width:620px; }
+.btn {
+  display:inline-block; margin:10px 8px 0 0;
+  padding:12px 20px; background:var(--gold);
+  color:var(--navy); border-radius:4px;
+  text-decoration:none; font-weight:bold;
+}
+.btn.outline { background:transparent; border:1px solid var(--gold); color:white; }
+section { padding:75px 7%; }
+.label { color:#9b772f; letter-spacing:2px; font-size:12px; font-weight:bold; }
+h2 { font-size:clamp(27px,4vw,42px); line-height:1.2; color:var(--navy); margin:12px 0 20px; }
+.lead { max-width:720px; color:#626c7a; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:30px; }
+.card {
+  padding:24px; background:white; border:1px solid #e7e1d5;
+  border-radius:9px; box-shadow:0 5px 20px #10213a08;
+}
+.card h3 { color:var(--navy); margin-top:0; }
+.number { color:#a47d32; font-weight:bold; letter-spacing:2px; }
+.dark { background:var(--navy); color:white; }
+.dark h2 { color:white; }
+.dark .lead { color:#c5cede; }
+.dark .card { background:var(--navy2); border-color:#35445c; color:#e0e6ef; }
+.dark .card h3 { color:var(--gold); }
+ul { padding-left:20px; }
+li { margin:8px 0; }
+.values { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:30px; }
+.value { border-top:3px solid var(--gold); background:white; padding:20px; }
+.value strong { display:block; color:var(--navy); }
+.value p { color:#626c7a; font-size:14px; }
+.activity { display:flex; gap:15px; margin:15px 0; padding:18px; background:white; border-radius:8px; }
+.activity b { color:#98732e; min-width:30px; }
+input[type=checkbox] { accent-color:#a47d32; width:17px; height:17px; }
+.task { display:flex; align-items:flex-start; gap:10px; padding:10px 0; border-bottom:1px solid #eee8dc; }
+.progress { background:#e8e3d8; height:9px; border-radius:9px; overflow:hidden; }
+#bar { background:var(--gold); height:100%; width:0%; transition:.2s; }
+.quote { text-align:center; background:#eee6d5; }
+.quote h2 { max-width:760px; margin:20px auto; }
+.quote p { max-width:680px; margin:auto; }
+footer { background:#071225; color:#c4ccda; padding:30px 7%; font-size:13px; }
+footer b { color:var(--gold); letter-spacing:2px; }
+@media(max-width:750px) {
+  header { align-items:flex-start; flex-direction:column; }
+  nav { gap:10px 15px; }
+  .hero { padding:70px 7%; min-height:470px; }
+  .grid { grid-template-columns:1fr; }
+  .values { grid-template-columns:1fr 1fr; }
+  section { padding:55px 7%; }
+}
+@media(max-width:420px) { .values { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">ISMAN<span>.</span></div>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#visi">Visi & Misi</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#target">Target</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Cita-cita · Pengabdian · Masa Depan</div>
+      <h1>MENUJU<br><span>DOKTER MILITER.</span></h1>
+      <p>Ilmu untuk menyembuhkan, keberanian untuk menghadapi tantangan, dan jiwa untuk mengabdi kepada sesama serta bangsa.</p>
+      <a class="btn" href="#roadmap">Jelajahi Perjalananku ↗</a>
+      <a class="btn outline" href="#tentang">Kenali Visiku</a>
+    </div>
+  </div>
+
+  <section id="tentang">
+    <div class="label">01 — TENTANG AKU</div>
+    <h2>Sebuah cita-cita yang ingin kuperjuangkan.</h2>
+    <p class="lead">Aku adalah seorang pelajar yang ingin terus berkembang, memperluas ilmu pengetahuan, melatih kedisiplinan, dan mempersiapkan diri untuk masa depan. Salah satu cita-cita terbesarku adalah menjadi dokter militer: profesi yang ingin kutuju melalui pendidikan, kerja keras, dan pengabdian.</p>
+    <p class="lead">Bagiku, perjalanan ini bukan hanya tentang mencapai gelar atau mengenakan seragam. Aku ingin menjadi seseorang yang bermanfaat, mampu membantu orang lain, serta dapat dipercaya ketika memegang sebuah amanah.</p>
+  </section>
+
+  <section id="visi" class="dark">
+    <div class="label">02 — VISI & MISI</div>
+    <h2>Mengabdi dengan ilmu dan integritas.</h2>
+    <p class="lead">Menjadi tenaga medis yang kompeten, berkarakter, dan siap mengabdikan kemampuan melalui jalur yang sesuai dengan persyaratan pendidikan serta penerimaan resmi.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="number">01</div>
+        <h3>Visi</h3>
+        <p>Berusaha menjadi dokter militer yang profesional, berempati, disiplin, dan bertanggung jawab.</p>
+      </article>
+      <article class="card">
+        <div class="number">02</div>
+        <h3>Misi</h3>
+        <p>Memperkuat akademik, menjaga kesehatan, melatih kepemimpinan, dan terus memperbaiki karakter.</p>
+      </article>
+      <article class="card">
+        <div class="number">03</div>
+        <h3>Tujuan</h3>
+        <p>Menggunakan ilmu kedokteran untuk menolong manusia dan berkontribusi bagi bangsa.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="label">03 — PETA PERJALANAN</div>
+    <h2>Langkah kecil menuju tujuan besar.</h2>
+    <p class="lead">Perjalanan ini dapat berubah sesuai hasil belajar, kemampuan, kesempatan, dan persyaratan resmi yang berlaku.</p>
+    <div class="grid">
+      <article class="card">
+        <div class="number">TAHAP 01</div>
+        <h3>Masa SMA</h3>
+        <ul>
+          <li>Memperkuat Biologi, Kimia, Fisika, dan Matematika.</li>
+          <li>Meningkatkan Bahasa Inggris.</li>
+          <li>Melatih disiplin dan manajemen waktu.</li>
+          <li>Mengikuti kegiatan organisasi yang positif.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="number">TAHAP 02</div>
+        <h3>Pendidikan Kedokteran</h3>
+        <ul>
+          <li>Mempelajari jalur masuk fakultas kedokteran.</li>
+          <li>Menyiapkan kemampuan akademik dan finansial.</li>
+          <li>Menempuh pendidikan sesuai ketentuan.</li>
+          <li>Mengembangkan keterampilan komunikasi dan empati.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="number">TAHAP 03</div>
+        <h3>Pengabdian Medis Militer</h3>
+        <ul>
+          <li>Mempelajari jalur dan persyaratan resmi.</li>
+          <li>Memantau informasi rekrutmen yang berlaku.</li>
+          <li>Memenuhi ketentuan kesehatan dan seleksi.</li>
+          <li>Terus meningkatkan kompetensi profesional.</li>
+        </ul>
+      </article>
+    </div>
+    <p class="lead">Catatan: jalur pendidikan dan penerimaan dokter militer memiliki ketentuan tersendiri. Periksa informasi resmi TNI dan institusi pendidikan saat akan mendaftar.</p>
+  </section>
+
+  <section class="dark">
+    <div class="label">04 — KARAKTER</div>
+    <h2>Karakter yang ingin kubangun.</h2>
+    <div class="values">
+      <div class="value"><strong>Disiplin</strong><p>Konsisten belajar dan bertanggung jawab.</p></div>
+      <div class="value"><strong>Empati</strong><p>Mendengarkan dan menghargai setiap manusia.</p></div>
+      <div class="value"><strong>Ketangguhan</strong><p>Belajar bangkit saat menghadapi kesulitan.</p></div>
+      <div class="value"><strong>Integritas</strong><p>Jujur, amanah, dan berani melakukan yang benar.</p></div>
+    </div>
+  </section>
+
+  <section id="kegiatan">
+    <div class="label">05 — PENGALAMAN & ORGANISASI</div>
+    <h2>Belajar memimpin, belajar melayani.</h2>
+    <p class="lead">Pengalaman di luar kelas juga menjadi bagian dari proses membentuk karakter. Bagian ini bisa kamu lengkapi dengan foto, tanggal, jabatan, dan cerita kegiatanmu.</p>
+    <div class="activity"><b>✚</b><div><strong>PMR</strong><br>Belajar kepedulian, pertolongan pertama, dan kemanusiaan.</div></div>
+    <div class="activity"><b>⚕</b><div><strong>Saka Bakti Husada</strong><br>Mengenal edukasi kesehatan dan pengabdian masyarakat.</div></div>
+    <div class="activity"><b>⚑</b><div><strong>Pramuka</strong><br>Melatih kepemimpinan, kerja sama, kedisiplinan, dan tanggung jawab.</div></div>
+    <div class="activity"><b>⌬</b><div><strong>Science Club</strong><br>Mengembangkan rasa ingin tahu dan kebiasaan berpikir ilmiah.</div></div>
+  </section>
+
+  <section id="target">
+    <div class="label">06 — TARGET PRIBADI</div>
+    <h2>Mulai dari hari ini.</h2>
+    <p class="lead">Centang target yang sudah kamu lakukan. Daftar ini membantumu mengevaluasi ikhtiar secara sederhana.</p>
+    <div class="card">
+      <div id="tasks"></div>
+      <p><strong id="count">0 dari 6 target selesai</strong></p>
+      <div class="progress"><div id="bar"></div></div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="label">KOMITMEN DIRI</div>
+    <h2>Aku tidak harus mencapai semuanya hari ini. Aku hanya perlu terus bertumbuh.</h2>
+    <p>Dengan doa, ikhtiar, dan tawakal, aku akan berusaha mempersiapkan diri sebaik mungkin. Jika menghadapi kegagalan, aku akan belajar. Jika harus mengubah rencana, aku akan mengevaluasi diri. Semoga cita-cita ini menjadi jalan untuk memberikan manfaat bagi sesama.</p>
+    <p style="margin-top:22px;color:#98732e;font-weight:bold">بِسْمِ اللهِ · تَوَكَّلْتُ عَلَى اللهِ</p>
+  </section>
+</main>
+
+<footer>
+  <b>ISMAN.</b>
+  <p>Menuju Dokter Militer · Belajar, bertumbuh, mengabdi.</p>
+  <span>Website cita-cita dan perjalanan pribadi.</span>
+</footer>
+
+<script>
+const items = [
+  "Belajar IPA minimal 30 menit.",
+  "Mengulang materi Biologi atau Kimia.",
+  "Berolahraga sesuai kemampuan.",
+  "Membaca informasi pendidikan dari sumber resmi.",
+  "Melakukan satu kebaikan untuk orang lain.",
+  "Mengevaluasi diri dan merencanakan esok hari."
+];
+const tasks = document.getElementById("tasks");
+items.forEach((item, i) => {
+  const label = document.createElement("label");
+  label.className = "task";
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.id = "task" + i;
+  const text = document.createElement("span");
+  text.textContent = item;
+  label.append(checkbox, text);
+  tasks.appendChild(label);
+  checkbox.addEventListener("change", update);
+});
+function update() {
+  const checked = [...tasks.querySelectorAll("input")].filter(x => x.checked).length;
+  document.getElementById("count").textContent = checked + " dari " + items.length + " target selesai";
+  document.getElementById("bar").style.width = (checked / items.length * 100) + "%";
+}
+</script>
+</body>
+</html>
